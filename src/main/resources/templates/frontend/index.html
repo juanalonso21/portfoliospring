@@ -11,12 +11,12 @@
     <div id="fondo" class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
     bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
     dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-    <div th:insert="frontend/layout/components/inicio :: inicio"></div>
 <header th:insert="frontend/layout/components/header :: HeaderBase"></header>
     
     <main>
-        <section id="experiencia" class="h-screen flex justify-center items-center text-3xl">Experiencia</section>
-        <section id="proyectos" class="h-screen flex justify-center items-center text-3xl">Proyectos</section>
+        <section id="inicio" th:insert="frontend/layout/components/inicio">Inicio</section>
+        <section th:insert="frontend/layout/components/experiencia">Experiencia</section>
+        <section id="proyectos" th:insert="frontend/layout/components/proyectos">Proyectos</section>
         <section id="sobre-mi" class="h-screen flex justify-center items-center text-3xl">Sobre Mí</section>
         <section id="contacto" class="h-screen flex justify-center items-center text-3xl">Contacto</section>
     </main>
