@@ -1,12 +1,20 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{/frontend/layout/base}">
-  <body>
+  <head th:replace="~{/frontend/layout/components/head :: headbase}">
+    
+  </head>
+  <body class="index-page">
     <header th:replace="~{/frontend/layout/components/header :: headerbase}"></header>
-    <div th:replace="~{/frontend/layout/components/hero :: herobase}"></div>
-    <div th:replace="~{/frontend/layout/components/inicio :: inicio}"></div>
-    <div th:replace="~{/frontend/layout/components/about :: aboutbase}"></div>
-    <div th:replace="~{/frontend/layout/components/experience :: experiencebase}"></div>
-    <div th:replace="~{/frontend/layout/components/tecnologias :: tecnologiasbase}"></div>
-    <div th:replace="~{/frontend/layout/components/portfolio :: portfoliobase}"></div>
+    <main class="main">
+      <div th:replace="frontend/layout/components/hero :: herobase"></div>
+      <div th:replace="frontend/layout/components/about :: aboutbase"></div>
+      <div th:replace="frontend/layout/components/experience :: experiencebase"></div>
+      <div th:replace="frontend/layout/components/tecnologias :: tecnologiasbase"></div>
+      <div th:replace="frontend/layout/components/portfolio :: portfoliobase"></div>
+    </main>
     <footer th:replace="~{/frontend/layout/components/footer :: footerbase}"></footer>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
   </body>
 </html>
