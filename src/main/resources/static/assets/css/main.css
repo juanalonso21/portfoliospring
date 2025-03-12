@@ -826,6 +826,7 @@ section,
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
 }
+
 /* TECNOLOGIAS */
 .elemento{
   background: var(--background2);
