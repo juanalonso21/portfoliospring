@@ -67,7 +67,16 @@
     <artifactId>webjars-locator</artifactId>
     <version>0.52</version>
 </dependency>
-
+<dependency>
+    <groupId>org.webjars.npm</groupId>
+    <artifactId>aos</artifactId>
+    <version>2.3.4</version>
+</dependency>
+<dependency>
+    <groupId>org.webjars.npm</groupId>
+    <artifactId>swiper</artifactId>
+    <version>11.0.5</version>
+</dependency>
 	</dependencies>
 
 	<build>
