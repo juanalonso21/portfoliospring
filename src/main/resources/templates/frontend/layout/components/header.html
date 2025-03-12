@@ -1,22 +1,51 @@
-    <header th:fragment="HeaderBase" class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
-        <nav class="flex px-3 text-sm font-medium rounded-full justify-center items-center bg-white/50 dark:bg-gray-800/90">
-            <!-- Aqui repito los enlaces asi que desde de java podemos automatizarlo para no tener que repetir codigo con th:each o tambien haciendo distintos fragmentos -->
-            <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500">
-                <span th:text="Inicio"></span>
-            </a>
-            <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500">
-                <span th:text="Experiencia"></span>
-            </a>
-            <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500">
-                <span th:text="Proyectos"></span>
-            </a>
-            <a class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500">
-                <span th:text="AboutMe"></span>
-            </a>
-            <button id="login"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 
-            font-medium rounded-full text-xs px-3 py-1.5 text-center ml-auto mr-auto dark:bg-blue-600 transition 3s dark:hover:bg-blue-800">
-            Contáctame
-        </button>       
-     </nav>
-    </header>
+<header id="header" class="header dark-background d-flex flex-column" th:fragment="headerbase">
+  <i class="header-toggle d-xl-none bi bi-list"></i>
+
+  <div class="profile-img">
+    <img src="assets/img/profile-photo.jpeg" alt="" class="img-fluid rounded-circle">
+  </div>
+
+  <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+    <!-- Uncomment the line below if you also wish to use an image logo -->
+    <!-- <img src="assets/img/logo.png" alt=""> -->
+    <h1 class="sitename">Juan Alonso Pérez</h1>
+  </a>
+
+  <div class="social-links text-center">
+    <a href="#" class="github"><i class="bi bi-github"></i></a>
+    <!-- <a href="#" class="facebook"><i class="bi bi-facebook"></i></a> -->
+    <a href="#" class="mail"><i class="bi bi-envelope-fill"></i></a>
+    
+    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+  </div>
+
+  <nav id="navmenu" class="navmenu">
+    <ul>
+      <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+      <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+      <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+      <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+      <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+      <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+          <li><a href="#">Dropdown 1</a></li>
+          <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Deep Dropdown 1</a></li>
+              <li><a href="#">Deep Dropdown 2</a></li>
+              <li><a href="#">Deep Dropdown 3</a></li>
+              <li><a href="#">Deep Dropdown 4</a></li>
+              <li><a href="#">Deep Dropdown 5</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Dropdown 2</a></li>
+          <li><a href="#">Dropdown 3</a></li>
+          <li><a href="#">Dropdown 4</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+</header>
+          
